@@ -15,7 +15,7 @@ The sample ID is composed of structured segments, separated by hyphens and under
 
 | Segment   | Example(s)     | Description |
 |-----------|----------------|-------------|
-| `JH-2-002` | JH-2-002       | **Individual ID** — unique identifier for the patient or donor |
+| `JH-2-00x` | JH-2-00x       | **Individual ID** — unique identifier for the patient or donor |
 | `a` or `0` | `a`, `b`, `c` (tumor) or `0`, `1`, `2` (normal) | **Tumor Sequence Letter** — for **tumors**, lowercase letters (`a`, `b`, `c`, ...) represent the order of tumor collection (chronological or collection sequence).<br>For **normal tissues**, numeric values (`0`, `1`, `2`, ...) are used to indicate collection order. |
 | `PDX`     | PDX, cellline, tumor, normal | **Tissue Type** — indicates the biological sample type, such as `PDX`, `cellline`, `tumor` (primary,recurrent, Metastatic), or `normal` |
 | `P0`      | P0, MP1, MP2   | **Passage Number** — specifies the generation of the PDX or cell line (`P0`, `MP1`, `MP2`, etc.).<br>This segment is **omitted for primary tumors and normal tissue samples**. |
@@ -53,16 +53,16 @@ Each sample is also assigned a unique `sample_barcode` to support batch-specific
 
 ### 🔤 Examples
 
-
 | Sample ID                     | Sample Barcode           | Description                                  |
 |------------------------------|--------------------------|----------------------------------------------|
-| `JH-2-002-0_blood`           | `JH-2-002-QZ1UM`          | Normal sample (blood) from individual JH-2-002 |
-| `JH-2-002-1_adjtissue`       | `JH-2-002-B23LG`          | Adjacent normal tissue from JH-2-002         |
-| `JH-2-002-a_PT`              | `JH-2-002-8WPAQ`          | Primary tumor "a" from JH-2-002              |
-| `JH-2-002-b_RT`              | `JH-2-002-L3Z59`          | Recurrent tumor "b" from JH-2-002            |
-| `JH-2-002-c_MT`              | `JH-2-002-X7U2D`          | Metastatic tumor "c" from JH-2-002           |
-| `JH-2-002-a_PDX_MP2`         | `JH-2-002-3JKV7WML`       | PDX from tumor "a", passage 2                |
-| `JH-2-002-b_cellline_MP1`    | `JH-2-002-KD9N8XQZ`       | Cell line from tumor "b", passage 1          |
+| `JH-2-00x-0_blood`           | `JH-2-00x-QZ1UM`          | Normal sample (blood) from individual JH-2-00x |
+| `JH-2-00x-1_adjtissue`       | `JH-2-00x-B23LG`          | Adjacent normal tissue from JH-2-00x         |
+| `JH-2-00x-a_PT`              | `JH-2-00x-8WPAQ`          | Primary tumor "a" from JH-2-00x              |
+| `JH-2-00x-b_RT`              | `JH-2-00x-L3Z59`          | Recurrent tumor "b" from JH-2-00x            |
+| `JH-2-00x-c_MT`              | `JH-2-00x-X7U2D`          | Metastatic tumor "c" from JH-2-00x           |
+| `JH-2-00x-a_PDX_MP2`         | `JH-2-00x-3JKV7WML`       | PDX from tumor "a", passage 2                |
+| `JH-2-00x-b_cellline_MP1`    | `JH-2-00x-KD9N8XQZ`       | Cell line from tumor "b", passage 1          |
+
 
 
 ---
