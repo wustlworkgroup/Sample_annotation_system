@@ -15,8 +15,8 @@ The sample ID is composed of structured segments, separated by hyphens and under
 |---------------|-------------|
 | `JH-2-002`    | **Individual ID** — unique identifier for the patient or donor |
 | `a`           | **Tumor Sequence Letter** — represents the order of tumor collection (chronological by collection date or collection sequence) |
-| `PDX`         | **Tissue Type** — sample type such as `PDX`, `cellline`, `PT` (primary tumor), or `normal` |
-| `P0`          | **Passage Number** — generation of the PDX or cell line (`P0`, `MP1`, `MP2`, etc.) |
+| `PDX`         | **Tissue Type** — sample type such as `PDX`, `cellline`, `tumor` |
+| `P0`          | **Passage Number** — generation of the PDX or cell line (`P0`, `MP1`, `MP2`, etc.), will omit this if it is tumor |
 
 ---
 
