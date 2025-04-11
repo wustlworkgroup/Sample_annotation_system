@@ -53,9 +53,6 @@ Each sample is also assigned a unique `sample_barcode` to support batch-specific
 
 ### 🔤 Examples
 
-### 🔤 Sample ID Examples
-
-### 🔤 Sample ID Examples
 
 | Sample ID                     | Sample Barcode           | Description                                  |
 |------------------------------|--------------------------|----------------------------------------------|
