@@ -23,10 +23,10 @@ The sample ID is composed of structured segments, separated by hyphens and under
 
 ---
 
-JH-2-002         a           PDX          P0
-   ↓             ↓            ↓            ↓
-Individual   Tumor Seq.   Tissue Type   Passage #
-   ID
+ 
+![Screenshot 2025-04-11 at 1 06 40 PM](https://github.com/user-attachments/assets/41d66505-61ae-4d23-ba2e-66801aca1b88)
+
+
 
 ---
 
