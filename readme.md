@@ -35,6 +35,20 @@ The sample ID is composed of structured segments, separated by hyphens and under
 
 ---
 
+### 🔤 Examples
+
+| Sample ID                   | Description |
+|----------------------------|-------------|
+| `JH-2-002-0_blood`         | First normal sample (blood) collected from individual JH-2-002 |
+| `JH-2-002-1_adjtissue`     | Second normal sample (adjacent normal tissue) collected from individual JH-2-002 |
+| `JH-2-002-a_PT`            | Primary tumor "a" from individual JH-2-002 (no passage info) |
+| `JH-2-002-b_RT`            | Recurrent tumor "b" from individual JH-2-002 |
+| `JH-2-002-c_MT`            | Metastatic tumor "c" from individual JH-2-002 |
+| `JH-2-002-a_PDX_MP2`       | PDX model derived from tumor "a", at mouse passage 2 |
+| `JH-2-002-b_cellline_MP1`  | Cell line derived from tumor "b", at passage 1 |
+
+---
+
 ## ✅ Benefits
 
 - 🔗 Enables **easy linking** between paired tumors, PDXs, and cell lines  
