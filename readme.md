@@ -48,15 +48,17 @@ Each sample is also assigned a unique `sample_barcode` to support batch-specific
 
 ### 🔤 Sample ID Examples
 
-| Sample ID                   | Sample Barcode         | Description |
-|----------------------------|------------------------|-------------|
-| `JH-2-002-0_blood`         | `JH-2-002-QZ1UM`        | First normal sample (blood) collected from individual JH-2-002 |
-| `JH-2-002-1_adjtissue`     | `JH-2-002-B23LG`        | Second normal sample (adjacent normal tissue) collected from individual JH-2-002 |
-| `JH-2-002-a_PT`            | `JH-2-002-8WPAQ`        | Primary tumor "a" from individual JH-2-002 (no passage info) |
-| `JH-2-002-b_RT`            | `JH-2-002-L3Z59`        | Recurrent tumor "b" from individual JH-2-002 |
-| `JH-2-002-c_MT`            | `JH-2-002-X7U2D`        | Metastatic tumor "c" from individual JH-2-002 |
-| `JH-2-002-a_PDX_MP2`       | `JH-2-002-3JKV7WML`     | PDX model derived from tumor "a", at mouse passage 2 |
-| `JH-2-002-b_cellline_MP1`  | `JH-2-002-KD9N8XQZ`     | Cell line derived from tumor "b", at passage 1 |
+### 🔤 Sample ID Examples
+
+| Sample ID                     | Sample Barcode           | Description                                  |
+|------------------------------|--------------------------|----------------------------------------------|
+| `JH-2-002-0_blood`           | `JH-2-002-QZ1UM`          | Normal sample (blood) from individual JH-2-002 |
+| `JH-2-002-1_adjtissue`       | `JH-2-002-B23LG`          | Adjacent normal tissue from JH-2-002         |
+| `JH-2-002-a_PT`              | `JH-2-002-8WPAQ`          | Primary tumor "a" from JH-2-002              |
+| `JH-2-002-b_RT`              | `JH-2-002-L3Z59`          | Recurrent tumor "b" from JH-2-002            |
+| `JH-2-002-c_MT`              | `JH-2-002-X7U2D`          | Metastatic tumor "c" from JH-2-002           |
+| `JH-2-002-a_PDX_MP2`         | `JH-2-002-3JKV7WML`       | PDX from tumor "a", passage 2                |
+| `JH-2-002-b_cellline_MP1`    | `JH-2-002-KD9N8XQZ`       | Cell line from tumor "b", passage 1          |
 
 
 ---
