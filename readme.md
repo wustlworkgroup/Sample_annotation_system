@@ -44,7 +44,7 @@ The sample ID is composed of structured segments, separated by hyphens and under
 
 ## 🧾 Sample Barcodes
 
-Each sample is also assigned a unique `sample_barcode` to support batch-specific tracking and anonymization. The `sample_barcode` is constructed by combining:
+Each sample is also assigned a unique `parentBiospecimenID` to support tissue-specific tracking and anonymization. The `parentBiospecimenID` is constructed by combining:
 
 - The `individualID` (e.g., `JH-2-002`)
 - A **random alphanumeric suffix**, with length depending on the **sample type or batch**
@@ -53,7 +53,7 @@ Each sample is also assigned a unique `sample_barcode` to support batch-specific
 
 ### 🔤 Examples
 
-| Sample ID                     | Sample Barcode           | Description                                  |
+| Sample ID                     | parentBiospecimenID           | Description                                  |
 |------------------------------|--------------------------|----------------------------------------------|
 | `JH-2-00x-0_blood`           | `JH-2-00x-QZ1UM`          | Normal sample (blood) from individual JH-2-00x |
 | `JH-2-00x-1_adjtissue`       | `JH-2-00x-B23LG`          | Adjacent normal tissue from JH-2-00x         |
