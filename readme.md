@@ -57,6 +57,24 @@ Below is an example of a properly structured shipping metadata table (`sample_sh
 | P001_PATCL    |        | R_1    | Batch_01 | JH-2-001       | cell line            | MP0     | Malignant Peripheral Nerve Sheath Tumor     | JH-2-001-b_PATCL_MP0       | flank          | male | 120         |
 | P001_PDXCL    |        | R_2    | Batch_01 | JH-2-001       | cell line            | MP1     | Malignant Peripheral Nerve Sheath Tumor     | JH-2-001-a_PDXCL_MP1       | flank          | male | 120         |
 
+## 🧾 Column Descriptions
+
+| Column Name                  | Description                                                                 |
+|-----------------------------|-----------------------------------------------------------------------------|
+| `name_from_you`             | Sample name or ID as provided by the originating lab or sample preparation site. Used during submission or shipment. |
+| `dna_id`                    | Unique identifier assigned to the DNA aliquot (e.g., `D_1`, `D_2`). Leave blank if not applicable. |
+| `rna_id`                    | Unique identifier assigned to the RNA aliquot (e.g., `R_1`, `R_2`). Leave blank if not applicable. |
+| `batch`                     | Shipment or experimental batch in which the sample was processed or sent.   |
+| `individual_id`             | Unique subject or patient ID (e.g., `JH-2-001`). Consistent across all derived samples. |
+| `tissue`                    | Type of biological material: `primary tumor`, `blood`, `xenograft passage`, or `cell line`. |
+| `specimenPreparationMethod`| Method used to preserve or prepare the sample (e.g., `Frash Frozen`, FFPE). |
+| `passage`                   | Passage number (e.g., `MP0`, `MP1`) for PDX or cell lines. Leave blank for primary/normal samples. |
+| `tumor_type`                | Full tumor type name (e.g., *Malignant Peripheral Nerve Sheath Tumor*, *Plexiform Neurofibroma*, `normal`). |
+| `parentBiospecimenID_WUSTL`| Hierarchical biospecimen ID describing origin, collection, and derivation (e.g., `JH-2-001-a_PDX_MP0`). |
+| `vial`                      | Internal vial code (e.g., `n1`, `n2`); denotes different pieces or replicates of the same tumor. |
+| `tumor_location`            | Anatomical source of the tumor (e.g., `flank`, `spine`, `peripheral blood`). |
+| `sex`                       | Biological sex of the subject (`male`, `female`, `unknown`).                |
+| `age_months`                | Age of the subject at time of sample collection, in months.                 |
 
 ## 🧾 Sample Barcodes
 
