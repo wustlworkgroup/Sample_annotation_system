@@ -44,18 +44,19 @@ from PDX|
 
 ---
 
-## shipping samples template
 
+## 🧬 Sample Shipping Frame
 
-```
-name_from_you	dna_id	rna_id	batch	individual_id	tissue	passage	tumor_type	parentBiospecimenID_WUSTL	tumor_location	sex	age_months
-P001_PT	D_1		Batch_01	JH-2-001	primary tumor		Malignant Peripheral Nerve Sheath Tumor	JH-2-001-a_PT	flank	male	120
-P001_BLD	D_2		Batch_01	JH-2-001	blood		Malignant Peripheral Nerve Sheath Tumor	JH-2-001-0_normal	flank	male	120
-P001_PDX0	D_3		Batch_01	JH-2-001	xenograft passage	MP0	Malignant Peripheral Nerve Sheath Tumor	JH-2-001-a_PDX_MP0	flank	male	120
-P001_PATCL		R_1	Batch_01	JH-2-001	cell line	MP0	Malignant Peripheral Nerve Sheath Tumor	JH-2-001-b_PATCL_MP0	flank	male	120
-P001_PDXCL		R_2	Batch_01	JH-2-001	cell line	MP1	Malignant Peripheral Nerve Sheath Tumor	JH-2-001-a_PDXCL_MP1	flank	male	120![image](https://github.com/user-attachments/assets/df91480d-96fa-42e7-88ad-1a8877b2594e)
+Below is an example of a properly structured shipping metadata table (`sample_shipping_frame.csv`):
 
-```
+| name_from_you | dna_id | rna_id | batch    | individual_id | tissue             | passage | tumor_type                                | parentBiospecimenID_WUSTL | tumor_location | sex  | age_months |
+|---------------|--------|--------|----------|----------------|---------------------|---------|---------------------------------------------|----------------------------|----------------|------|-------------|
+| P001_PT       | D_1    |        | Batch_01 | JH-2-001       | primary tumor        |         | Malignant Peripheral Nerve Sheath Tumor     | JH-2-001-a_PT              | flank          | male | 120         |
+| P001_BLD      | D_2    |        | Batch_01 | JH-2-001       | blood                |         | Malignant Peripheral Nerve Sheath Tumor     | JH-2-001-0_normal          | flank          | male | 120         |
+| P001_PDX0     | D_3    |        | Batch_01 | JH-2-001       | xenograft passage    | MP0     | Malignant Peripheral Nerve Sheath Tumor     | JH-2-001-a_PDX_MP0         | flank          | male | 120         |
+| P001_PATCL    |        | R_1    | Batch_01 | JH-2-001       | cell line            | MP0     | Malignant Peripheral Nerve Sheath Tumor     | JH-2-001-b_PATCL_MP0       | flank          | male | 120         |
+| P001_PDXCL    |        | R_2    | Batch_01 | JH-2-001       | cell line            | MP1     | Malignant Peripheral Nerve Sheath Tumor     | JH-2-001-a_PDXCL_MP1       | flank          | male | 120         |
+
 
 ## 🧾 Sample Barcodes
 
