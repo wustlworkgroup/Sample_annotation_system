@@ -45,7 +45,7 @@ from PDX|
 ---
 
 
-## 🧬 Sample Shipping Frame
+## 🧬 Sample Shipping Frame for human/PDX samples (not for cell experiments)
 
 Below is an example of a properly structured shipping metadata table (`sample_shipping_frame.csv`):
 
