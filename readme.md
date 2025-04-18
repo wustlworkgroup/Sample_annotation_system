@@ -11,7 +11,7 @@ The sample ID is composed of structured segments, separated by hyphens and under
 
 ### Components:
 
-### 📘 Sample ID Components
+### 📘 Tissue ID Components
 
 | Segment            | Example(s)                            | Description |
 |--------------------|----------------------------------------|-------------|
@@ -49,7 +49,7 @@ from PDX|
 
 Below is an example of a properly structured shipping metadata table (`sample_shipping_frame.csv`):
 
-| name_from_you | dna_id | rna_id | batch    | individual_id | tissue             | passage | tumor_type                                | parentBiospecimenID_WUSTL | tumor_location | sex  | age_months |
+| name_from_you | dna_id | rna_id | batch    | individual_id | tissue             | passage | tumor_type                                | parentBiospecimenID | tumor_location | sex  | age_months |
 |---------------|--------|--------|----------|----------------|---------------------|---------|---------------------------------------------|----------------------------|----------------|------|-------------|
 | P001_PT       | D_1    |        | Batch_01 | JH-2-001       | primary tumor        |         | Malignant Peripheral Nerve Sheath Tumor     | JH-2-001-a_PT              | flank          | male | 120         |
 | P001_BLD      | D_2    |        | Batch_01 | JH-2-001       | blood                |         | Malignant Peripheral Nerve Sheath Tumor     | JH-2-001-0_blood          | flank          | male | 120         |
@@ -87,8 +87,8 @@ Each sample is also assigned a unique `parentBiospecimenID` to support tissue-sp
 
 ### 🔤 Examples
 
-| Sample ID                     | parentBiospecimenID           | Description                                  |
-|------------------------------|--------------------------|----------------------------------------------|
+| parentBiospecimenID          | Tumor_sample_barcode      | Description                                  |
+|------------------------------|-------------------------- |----------------------------------------------|
 | `JH-2-00x-0_blood`           | `JH-2-00x-QZ1UM`          | Normal sample (blood) from individual JH-2-00x |
 | `JH-2-00x-1_adjtissue`       | `JH-2-00x-B23LG`          | Adjacent normal tissue from JH-2-00x         |
 | `JH-2-00x-a_PT`              | `JH-2-00x-8WPAQ`          | Primary tumor "a" from JH-2-00x              |
