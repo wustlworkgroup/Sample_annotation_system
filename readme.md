@@ -19,7 +19,7 @@ Below is an example of a properly structured shipping metadata table (`sample_sh
 | Column Name                  | Description                                                                 |
 |-----------------------------|-----------------------------------------------------------------------------|
 | `label`                     | Sample alias or code provided by the lab or shipping site. Used for tracking during submission. |
-| `date`                      | Month and year of processing or shipping, in `MMYY` format (e.g., `2504` = April 2025). |
+| `date`                      | Month and year of processing or shipping, in `YYMM` format (e.g., `2504` = April 2025). |
 | `individual_id`             | Unique identifier for the patient or subject (e.g., `JH-2-001`). Consistent across all samples from the same individual. |
 | `nuc_id`                    | Nucleic acid ID — either DNA (e.g., `D_1`) or RNA (e.g., `R_1`). Only one per row. |
 | `specimenID`                | Unique barcode for the specimen: `<individual_id>-<date><nuc_id><random3digits>`. |
