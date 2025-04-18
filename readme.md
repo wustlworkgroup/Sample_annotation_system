@@ -76,9 +76,9 @@ Below is an example of a properly structured shipping metadata table (`sample_sh
 | `sex`                       | Biological sex of the subject (`male`, `female`, `unknown`).                |
 | `age_months`                | Age of the subject at time of sample collection, in months.                 |
 
-## 🧾 Sample Barcodes
+## 🧾 Tumor Sample Barcodes
 
-Each sample is also assigned a unique `parentBiospecimenID` to support tissue-specific tracking and anonymization. The `parentBiospecimenID` is constructed by combining:
+Each sample (speciman) is also assigned a unique `Tumor_sample_barcode` to support tissue-specific tracking and anonymization. The `Tumor_sample_barcode` is constructed by combining:
 
 - The `individualID` (e.g., `JH-2-002`)
 - A **random alphanumeric suffix**, with length depending on the **sample type or batch**
