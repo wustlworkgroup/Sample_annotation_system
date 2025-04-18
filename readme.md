@@ -30,10 +30,6 @@ Below is an example of a properly structured shipping metadata table (`sample_sh
 | `batch`                     | Shipment or processing batch (e.g., `WU_batch4` for Washington University batch 4). |
 | `assay`                     | Type of sequencing or profiling assay (e.g., `Whole Exome Sequencing`, `RNAseq`, `Whole Genome Sequencing`). |
 
-## 🔍 speciman name 
-
-The sample ID is composed of structured segments, separated by hyphens and underscores, with each part carrying specific biological or experimental meaning.
-
 
 ### parentBiospecimenID_WUSTL (tumor ID) :
 
