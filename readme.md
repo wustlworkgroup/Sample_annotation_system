@@ -5,30 +5,36 @@ This repository defines a standardized naming system for biospecimens used in ge
 ---
 ## 🧬 sample map
 
+Below is an example of a properly structured shipping metadata table (`sample_shipping_frame.csv`) using the latest standardized column order and unique specimenID format:
 
-Below is an example of a properly structured shipping metadata table (`sample_shipping_frame.csv`) using the latest standardized column order:
+| label       | individual_id | tumor_seq | date  | nuc_id | seq_ID | specimenID               | tissue             | passage | tumorType                                | parentBiospecimenID_WUSTL | batch      | assay                    |
+|-------------|----------------|-----------|-------|--------|--------|---------------------------|--------------------|---------|-------------------------------------------|-----------------------------|------------|--------------------------|
+| P001_PT     | JH-2-001       | a         | 2504  | D1     | S001   | JH-2-001-a_2504D1_S001    | primary tumor      |         | Malignant Peripheral Nerve Sheath Tumor   | JH-2-001-a_PT               | WU_batch4  | Whole Exome Sequencing   |
+| P001_BLD    | JH-2-001       | 0         | 2504  | D2     | S002   | JH-2-001-0_2504D2_S002    | blood              |         | Malignant Peripheral Nerve Sheath Tumor   | JH-2-001-0_N                | WU_batch4  | Whole Genome Sequencing  |
+| P001_PDX0   | JH-2-001       | a         | 2504  | D3     | S003   | JH-2-001-a_2504D3_S003    | xenograft passage  | MP0     | Malignant Peripheral Nerve Sheath Tumor   | JH-2-001-a_PDX_MP0          | WU_batch4  | Whole Exome Sequencing   |
+| P001_PATCL  | JH-2-001       | b         | 2504  | R1     | S004   | JH-2-001-b_2504R1_S004    | cell line          | MP0     | Malignant Peripheral Nerve Sheath Tumor   | JH-2-001-b_PATCL_MP0        | WU_batch4  | RNAseq                   |
+| P001_PDXCL  | JH-2-001       | a         | 2504  | R2     | S005   | JH-2-001-a_2504R2_S005    | cell line          | MP1     | Malignant Peripheral Nerve Sheath Tumor   | JH-2-001-a_PDXCL_MP1        | WU_batch4  | RNAseq                   |
 
-| label       | date  | individual_id | nuc_id | specimenID             | parentBiospecimenID_WUSTL | tissue             | passage | tumorType                                | batch      | assay                    |
-|-------------|-------|----------------|--------|-------------------------|-----------------------------|--------------------|---------|-------------------------------------------|------------|--------------------------|
-| P001_PT     | 2504  | JH-2-001       | D1     | JH-2-001_2504D1         | JH-2-001-a_PT               | primary tumor      |         | Malignant Peripheral Nerve Sheath Tumor   | WU_batch4  | Whole Exome Sequencing   |
-| P001_BLD    | 2504  | JH-2-001       | D2     | JH-2-001_2504D2         | JH-2-001-0_N                | blood              |         | Malignant Peripheral Nerve Sheath Tumor   | WU_batch4  | Whole Genome Sequencing  |
-| P001_PDX0   | 2504  | JH-2-001       | D3     | JH-2-001_2504D3         | JH-2-001-a_PDX_MP0          | xenograft passage  | MP0     | Malignant Peripheral Nerve Sheath Tumor   | WU_batch4  | Whole Exome Sequencing   |
-| P001_PATCL  | 2504  | JH-2-001       | R1     | JH-2-001_2504R1         | JH-2-001-b_PATCL_MP0        | cell line          | MP0     | Malignant Peripheral Nerve Sheath Tumor   | WU_batch4  | RNAseq                   |
-| P001_PDXCL  | 2504  | JH-2-001       | R2     | JH-2-001_2504R2         | JH-2-001-a_PDXCL_MP1        | cell line          | MP1     | Malignant Peripheral Nerve Sheath Tumor   | WU_batch4  | RNAseq                   |
+### Column Definitions
 
 | Column Name                  | Description                                                                 |
 |-----------------------------|-----------------------------------------------------------------------------|
-| `label`                     | Sample alias or code provided by the lab or shipping site. Used for tracking during submission. |
-| `date`                      | Month and year of processing or shipping, in `YYMM` format (e.g., `2504` = April 2025). |
-| `individual_id`             | Unique identifier for the patient or subject (e.g., `JH-2-001`). Consistent across all samples from the same individual. |
-| `nuc_id`                    | Nucleic acid ID — either DNA (e.g., `D_1`) or RNA (e.g., `R_1`). Only one per row. |
-| `specimenID`                | Unique barcode for the specimen: `<individual_id>-<date><nuc_id><random3digits>`. |
-| `parentBiospecimenID_WUSTL`| Hierarchical ID showing sample source and derivation (e.g., `JH-2-001-a_PDX_MP0`). |
-| `tissue`                    | Biological sample type: `primary tumor`, `blood`, `xenograft passage`, or `cell line`. |
-| `passage`                   | Passage number (e.g., `MP0`, `MP1`) for PDX or cell lines. Leave blank for primary or normal samples. |
-| `tumorType`                 | Full tumor diagnosis name (e.g., *Malignant Peripheral Nerve Sheath Tumor*, `normal`). |
-| `batch`                     | Shipment or processing batch (e.g., `WU_batch4` for Washington University batch 4). |
-| `assay`                     | Type of sequencing or profiling assay (e.g., `Whole Exome Sequencing`, `RNAseq`, `Whole Genome Sequencing`). |
+| `label`                     | Sample alias or code provided by the lab or shipping site. Used for tracking. |
+| `individual_id`             | Unique identifier for the patient or subject (e.g., `JH-2-001`).            |
+| `tumor_seq`                 | Tumor sequence identifier (e.g., `a`, `b`, `0`), indicating sample version. |
+| `date`                      | Month and year of extraction or shipment in `YYMM` format (e.g., `2504`).   |
+| `nuc_id`                    | Nucleic acid ID (e.g., `D1` for DNA, `R1` for RNA).                         |
+| `seq_ID`                    | Sequencing ID to uniquely track individual nucleic acid aliquots.           |
+| `specimenID`                | Formatted ID: `<individual_id>-<tumor_seq>_<date><nuc_id>_<seq_ID>`.       |
+| `tissue`                    | Sample source (e.g., `blood`, `primary tumor`, `xenograft passage`).       |
+| `passage`                   | Passage number for PDX/cell lines (e.g., `MP0`). Leave blank otherwise.     |
+| `tumorType`                 | Diagnosis (e.g., *Malignant Peripheral Nerve Sheath Tumor*, or `normal`).  |
+| `parentBiospecimenID_WUSTL`| Original biospecimen tracking ID.                                           |
+| `batch`                     | Processing batch name (e.g., `WU_batch4`).                                 |
+| `assay`                     | Type of sequencing or analysis (e.g., `RNAseq`, `Whole Genome Sequencing`).|
+
+
+
 
 
 ### parentBiospecimenID_WUSTL (tumor ID) :
