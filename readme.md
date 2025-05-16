@@ -44,7 +44,7 @@ Below is an example of a properly structured shipping metadata table (`sample_sh
 | Segment            | Example(s)                            | Description |
 |--------------------|----------------------------------------|-------------|
 | `JH-2-00x`         | JH-2-00x                               | **Individual ID** — unique identifier for the patient or donor |
-| `a` or `0`         | `a`, `b`, `c` (tumor) or `0`, `1`, `2` (normal) | **Tumor Sequence Letter** — for **tumors**, lowercase letters (`a`, `b`, `c`, ...) represent the order of tumor collection (chronological or collection sequence).<br>For **normal tissues**, numeric values (`0`, `1`, `2`, ...) are used to indicate collection order. |
+| `a` or `0`         | `a`,'a1', `b`, `c` (tumor) or `0`, `1`, `2` (normal) | **Tumor Sequence Letter** — for **tumors**, lowercase letters (`a`, `b`, `c`, ...) represent the order of surgery (a1/a2/a3 samples from each surgery).<br>For **normal tissues**, numeric values (`0`, `1`, `2`, ...) are used to indicate collection order. |
 | `PDX`              | PDX, tumor, normal,PATCL,PDXCL         | **Tissue Type** — indicates the biological sample type, such as `PDX`, `cellline`, `tumor` (primary, recurrent, metastatic), or `normal`; PATCL: Cell line from patient Tumor; PDXCL: 
 from PDX|
 | `P0`               | P0, MP1, MP2                           | **Passage Number** — specifies the generation of the PDX or cell line (`P0`, `MP1`, `MP2`, etc.).<br>This segment is **omitted for primary tumors and normal tissue samples**. |
